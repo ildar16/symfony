@@ -9,7 +9,7 @@ trait CreatedAtTrait
     /**
      * @ORM\Column(type="integer", name="created_at", nullable=false)
      */
-    protected $createdAt = 0;
+    protected int $createdAt = 0;
 
     public function getCreatedAt(): CarbonImmutable
     {

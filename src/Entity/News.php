@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\NewsRepository;
 use Carbon\CarbonImmutable;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\ColumnTrait\CreatedAtTrait;
 use App\Entity\ColumnTrait\UpdatedAtTrait;
@@ -23,52 +24,52 @@ class News
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer", unique=true)
      */
-    private $id;
+    private int $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $title;
+    private string $title;
 
     /**
      * @ORM\Column(type="text")
      */
-    private $short_description;
+    private string $short_description;
 
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $long_description;
+    private string $long_description;
 
     /**
      * @ORM\Column(type="date", nullable=true)
      */
-    private $date;
+    private DateTimeInterface $date;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $author;
+    private string $author;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $link_label;
+    private string $link_label;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $link_url;
+    private string $link_url;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $visible;
+    private string $visible;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $image;
+    private string $image;
 
     public function getId(): ?int
     {

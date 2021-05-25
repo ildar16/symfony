@@ -21,21 +21,19 @@ class NewsCrudController extends AbstractCrudController
         return News::class;
     }
 
-
     public function configureFields(string $pageName): iterable
     {
-        $now = new CarbonImmutable();
-
-        yield TextField::new('title');
-        yield TextEditorField::new('short_description');
-        yield TextEditorField::new('long_description');
-        yield DateField::new('date')->setRequired(true);
-        yield TextField::new('author');
-        yield TextField::new('link_label');
-        yield TextField::new('link_url');
-        yield TextField::new('visible');
-        yield ImageField::new('image', 'Image')->onlyOnForms()
-            ->setUploadDir('/public/images/');
+        return [
+            TextField::new('title'),
+            TextEditorField::new('short_description'),
+            TextEditorField::new('long_description'),
+            DateField::new('date')->setRequired(true),
+            TextField::new('author'),
+            TextField::new('link_label'),
+            TextField::new('link_url'),
+            TextField::new('visible'),
+            ImageField::new('image', 'Image')->onlyOnForms()
+                ->setUploadDir('/public/images/'),
+        ];
     }
-
 }

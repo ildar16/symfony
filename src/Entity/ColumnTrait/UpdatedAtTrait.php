@@ -9,7 +9,7 @@ trait UpdatedAtTrait
     /**
      * @ORM\Column(type="integer", name="updated_at", nullable=false)
      */
-    protected $updatedAt;
+    protected int $updatedAt;
 
     public function getUpdatedAt(): CarbonImmutable
     {

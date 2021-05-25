@@ -22,132 +22,132 @@ class Project
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer", unique=true)
      */
-    private $id;
+    private int $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $program_name;
+    private string $program_name;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $short_description;
+    private string $short_description;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $long_description;
+    private string $long_description;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $benefits;
+    private string $benefits;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $address;
+    private string $address;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $city;
+    private string $city;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $zipdcode;
+    private string $zipdcode;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $latitude;
+    private string $latitude;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $longitude;
+    private string $longitude;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $project_developer;
+    private string $project_developer;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $architect;
+    private string $architect;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $delivery;
+    private string $delivery;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $floor_area;
+    private string $floor_area;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $nd_de_logements;
+    private string $nd_de_logements;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $images;
+    private string $images;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $brochure;
+    private string $brochure;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $document_label;
+    private string $document_label;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $description_label;
+    private string $description_label;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $film;
+    private string $film;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $visible;
+    private string $visible;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $coming_soon;
+    private string $coming_soon;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $reference;
+    private string $reference;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $salesman;
+    private string $salesman;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $link_label;
+    private string $link_label;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $link_url_saleman_site;
+    private string $link_url_saleman_site;
 
     public function getId(): ?int
     {
@@ -450,18 +450,6 @@ class Project
     public function setLinkUrlSalemanSite(string $link_url_saleman_site): self
     {
         $this->link_url_saleman_site = $link_url_saleman_site;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?string
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(string $createdAt): self
-    {
-        $this->createdAt = $createdAt;
 
         return $this;
     }
